@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Targeted Editing - Campus Mapping by IndyHurt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Targeted Editing - Campus Mapping</h1>
+      <h2 class="project-tagline">Lots of easy edits lead to outstanding campus mapping!</h2>
+      <a href="https://github.com/IndyHurt/te-campus" class="btn">View on GitHub</a>
+      <a href="https://github.com/IndyHurt/te-campus/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/IndyHurt/te-campus/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="so-you-want-to-do-some-micro-mapping--lets-get-started-with-a-campus" class="anchor" href="#so-you-want-to-do-some-micro-mapping--lets-get-started-with-a-campus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>So you want to do some micro mapping?  Let's get started with a campus!</h3>
+
+<p>Welcome to our <strong>Targeted Editing</strong> series where today you can explain how the universe is expanding or make OpenStreetMap data outstanding! (Both take about the same amount of time.) </p>
+
+<p>Back in <a href="https://mapzen.com/blog/targeted-editing-school-polygons">December</a>, we published one of our first Targeted Editing posts encouraging editors to add polygons to represent school grounds where the school was currently only represented as a point.  Since that post, xxx features with the <code>amenity=school</code> tag have been added or modified!  </p>
+
+<p>Chart of some sort goes here.</p>
+
+<p>Since it was one of our more popular posts, we thought we'd revisit schools and outline several additional features editors can add.</p>
+
+<h4>
+<a id="start-with-a-polygon-that-covers-the-grounds-of-the-entire-campus" class="anchor" href="#start-with-a-polygon-that-covers-the-grounds-of-the-entire-campus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start with a polygon that covers the grounds of the entire campus.</h4>
+
+<h5>
+<a id="use-the-following-tags" class="anchor" href="#use-the-following-tags" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school</a> if the school is for children age 5 to 18.</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Duniversity">amenity=university</a> for universities. </li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcollege">amenity=college</a> for colleges.  A university can be comprised of several colleges.  If a campus is comprised of more than one polygon, use a multi polygon <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">relation</a>, take each area as <code>role=outer</code>, and give the relation the <code>amenity=school</code>, <code>amenity=university</code>, or <code>amenity=college</code> - whichever is most appropriate.</li>
+<li>Is a multipart polygon necessary to map the grounds of the campus?  Create a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">site</a> relation to group them.</li>
+</ul>
+
+<h4>
+<a id="digitize-all-walkways-and-cycling-paths-on-the-campus" class="anchor" href="#digitize-all-walkways-and-cycling-paths-on-the-campus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize all walkways and cycling paths on the campus.</h4>
+
+<h5>
+<a id="use-the-following-tags-1" class="anchor" href="#use-the-following-tags-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> if the path is multi use but designated for non motorized vehicles.</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">highway=footway</a> if the path is designated for non motorized vehicles</li>
+<li>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dcycleway">highway=cycleway</a> if the path is designated for bicycles only</li>
+<li>
+<a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface</a>=* to describe the surface of the path</li>
+</ul>
+
+<h4>
+<a id="digitize-the-buildings-as-polygons" class="anchor" href="#digitize-the-buildings-as-polygons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the buildings as polygons.</h4>
+
+<h5>
+<a id="use-the-following-tags-2" class="anchor" href="#use-the-following-tags-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dschool">building=school</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Duniversity">building=university</a></li>
+<li><a href="">building=college</a></li>
+<li>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Ddormitory">building=dormitory</a> or <code>building=hall_of_residence</code>
+</li>
+<li>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary">amenity=library</a> for libraries together with <code>building=yes</code>
+</li>
+<li>
+<a href="https://wiki.openstreetmap.org/wiki/Key:height">height</a>=* to associate a height of a building in <strong>METERS</strong> and/or <a href="https://wiki.openstreetmap.org/wiki/Key:building:levels">building:levels</a>for the number of floors above ground.</li>
+<li>use a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a> to digitize a building with an interior <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/courtyard">courtyard</a>.</li>
+</ul>
+
+<h4>
+<a id="digitize-the-entrances-of-buildings-as-points" class="anchor" href="#digitize-the-entrances-of-buildings-as-points" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the entrances of buildings as points.</h4>
+
+<h5>
+<a id="use-the-following-tags-3" class="anchor" href="#use-the-following-tags-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance=yes</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance=main</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance=emergency, etc</a></li>
+<li>Ensure that the walking paths connect to the building entrances.</li>
+</ul>
+
+<h4>
+<a id="when-multiple-departments-exist-in-a-building-digitize-the-departments-as-nodes" class="anchor" href="#when-multiple-departments-exist-in-a-building-digitize-the-departments-as-nodes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>When multiple departments exist in a building, digitize the departments as nodes.</h4>
+
+<h5>
+<a id="use-the-following-tags-4" class="anchor" href="#use-the-following-tags-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Deducational_institution">office=educational_institution</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Names">name</a>=* (populate with the name of the department)</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:level">level</a>=* (to indicate what floor the department office is on - not to be confused with <a href="https://wiki.openstreetmap.org/wiki/Key:building:levels">building:levels</a>)</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Addresses">all appropriate address fields</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:phone">phone</a>=*</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:website">website</a>=*</li>
+</ul>
+
+<h4>
+<a id="digitize-the-playing-fields-as-polygons" class="anchor" href="#digitize-the-playing-fields-as-polygons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the playing fields as polygons.</h4>
+
+<h5>
+<a id="use-the-following-tags-5" class="anchor" href="#use-the-following-tags-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport=baseball</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport=basketball</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport=tennis</a>, etc.</li>
+</ul>
+
+<h4>
+<a id="digitize-the-parking-areas-as-polygons" class="anchor" href="#digitize-the-parking-areas-as-polygons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the parking areas as polygons.</h4>
+
+<h5>
+<a id="use-the-following-tags-6" class="anchor" href="#use-the-following-tags-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">amenity=parking</a></li>
+</ul>
+
+<h4>
+<a id="digitize-the-parking-aisles-as-lines" class="anchor" href="#digitize-the-parking-aisles-as-lines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the parking aisles as lines.</h4>
+
+<h5>
+<a id="use-the-following-tags-7" class="anchor" href="#use-the-following-tags-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dparking_aisle">service=parking_aisle</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a> (where appropriate).  The direction will be the direction in which the way was digitized.  If the direction is incorrect, use the "reverse way" tool to reverse the direction of the way to match the flow of oneway traffic.  This may also require adding additional nodes to the way to ensure that tags are applied to the appropriate segments.</li>
+</ul>
+
+<h4>
+<a id="digitize-any-designated-small-bicycle-parking-areas-as-points-and-large-bicycle-parking-areas-as-polygons" class="anchor" href="#digitize-any-designated-small-bicycle-parking-areas-as-points-and-large-bicycle-parking-areas-as-polygons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize any designated small bicycle parking areas as points and large bicycle parking areas as polygons.</h4>
+
+<h5>
+<a id="use-the-following-tags-8" class="anchor" href="#use-the-following-tags-8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">amenity=bicycle_parking</a></li>
+</ul>
+
+<h4>
+<a id="digitize-the-trees-as-nodes" class="anchor" href="#digitize-the-trees-as-nodes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize the trees as nodes.</h4>
+
+<h5>
+<a id="use-the-following-tags-9" class="anchor" href="#use-the-following-tags-9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">natural=tree</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:height">height</a>=* in meters</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:taxon">taxon</a>=* for the family if know - see other tag combinations</li>
+</ul>
+
+<h4>
+<a id="digitize-atms-automatic-teller-machines-as-nodes" class="anchor" href="#digitize-atms-automatic-teller-machines-as-nodes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize ATMs (automatic teller machines) as nodes</h4>
+
+<h5>
+<a id="use-the-following-tags-10" class="anchor" href="#use-the-following-tags-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Datm">amenity=atm</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:operator">operator</a>=* (the name of the bank that operates the ATM)</li>
+</ul>
+
+<h4>
+<a id="digitize-restaurants-in-a-food-court-as-nodes" class="anchor" href="#digitize-restaurants-in-a-food-court-as-nodes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Digitize restaurants in a food court as nodes.</h4>
+
+<h5>
+<a id="use-the-following-tags-11" class="anchor" href="#use-the-following-tags-11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use the following tags:</h5>
+
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant">amenity=restaurant</a></li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Names">name</a>=*</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:cuisine">cuisine</a>=*</li>
+<li>
+<a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a>=*
+
+<ul>
+<li>See tips for formatting hours in our <a href="https://mapzen.com/blog/new-years-resolutions-fitness">fitness</a> post or check out <a href="http://github.pavie.info/yohours/">YoHours</a> for an intuitive interface that can help format hours for you.</li>
+</ul>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/IndyHurt/te-campus">Targeted Editing - Campus Mapping</a> is maintained by <a href="https://github.com/IndyHurt">IndyHurt</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
